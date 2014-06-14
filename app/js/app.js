@@ -7,11 +7,14 @@ angular.module('kivame', [
   'kivame.filters',
   'kivame.services',
   'kivame.directives',
+  'kivame.home.controllers',
+  'kivame.login.controllers',
+  'kivame.sidescroll.controllers',
   'kivame.controllers'
 ]).
 config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/login', {templateUrl: 'partials/login.html', controller: 'MyCtrl1'});
-  $routeProvider.when('/home', {templateUrl: 'partials/home.html', controller: 'MyCtrl2'});
-  $routeProvider.when('/sidescroll', {templateUrl: 'partials/sidescroll.html', controller: 'MyCtrl2'});
+  $routeProvider.when('/login', {templateUrl: 'partials/login.html', controller: 'LoginController'});
+  $routeProvider.when('/home', {templateUrl: 'partials/home.html', controller: 'HomeController'});
+  $routeProvider.when('/sidescroll', {templateUrl: 'partials/sidescroll.html', controller: 'SideScrollController'});
   $routeProvider.otherwise({redirectTo: '/login'});
 }]);
