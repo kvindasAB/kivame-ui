@@ -14,9 +14,8 @@
                       <h4 class="l-name">{{loan.borrower_name}}</h4>
                       <img ng-src="{{loan.flag_url}}" class="flag" alt="flag" style="width:35px;height:20px;">
                       <h4 class="l-country">{{loan.country}}</h4>
-                      <div class="prog-cont">
-                        <div class="prog-bar">{{setProgress(loan.funded_percentage)}}</div>
-                      </div>
+                      <a ng-href="http://www.kiva.org/lend/{{loan.id}}" target="_blank">Loan Details</a>
+
                   </div>
                   </div>
               </div>
