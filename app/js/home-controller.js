@@ -54,4 +54,10 @@ angular.module('kivame.home.controllers', [])
             console.log("button just clicked." + name);
         }
 
+        $scope.isLoggedInFB = function() {
+            if (FB.getUserID() != ""){
+                // render partial;
+            }
+        }
+
   }]);

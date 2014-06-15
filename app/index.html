@@ -38,8 +38,8 @@
       } else {
         // The person is not logged into Facebook, so we're not sure if
         // they are logged into this app or not.
-        document.getElementById('status').innerHTML = 'Please log ' +
-          'into Facebook.';
+        document.getElementById('status').innerHTML = 'Connect your' +
+          ' Facebook account.';
       }
     }
 
@@ -118,6 +118,8 @@
             <li><a href="#/login">Login</a></li>
             <li><a href="#/home">Home</a></li>
             <li><a href="#/sidescroll">SideScroll</a></li>
+              <p id="status"></p>
+            <li><a href="#"></a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
