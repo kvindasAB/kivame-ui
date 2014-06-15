@@ -3,29 +3,43 @@
 /* Controllers */
 
 angular.module('kivame.home.controllers', [])
-  .controller('HomeController', ['$scope', 'KivaService', function($scope, KivaService) {
+  .controller('HomeController', ['$scope', '$rootScope', '$timeout' , 'KivaService', function($scope, $rootScope, $timeout, KivaService) {
 
         // CONSTANTS
         $scope.ITEMS_PER_SLIDE = 4;
 
         // ATTRIBUTES
         $scope.kivalist = null;
+        $scope.latestFBStatus = null;
 
         // METHODS
         $scope.init = function(){
             console.log("init...");
-            $scope.requestLoans();
+            $timeout(function(){
+                $scope.requestLoans();
+            }, 500);
         }
 
         $scope.requestLoans = function() {
             console.log("requestLoans...");
+            // Status has not changed. Avoid several queries at once.
+            if($scope.latestFBStatus === $rootScope.fbAuth.status){
+                return;
+            }
+            $scope.latestFBStatus = $rootScope.fbAuth.status;
             KivaService.getRecommendedLoans(function(result){
                 console.log("getRecommendedLoans:...");
                 $scope.createSlidesPerCategoryList(result);
                 console.log(result);
                 $scope.kivalist = result;
-            });
+            }, $rootScope.fbAuth);
         }
+
+        $scope.$on('facebookStatusChanged', function(event, value){
+            $timeout(function(){
+                $scope.requestLoans();
+            }, 500);
+        });
 
         $scope.createSlidesPerCategoryList = function(argCategoryList){
             _.forEach(argCategoryList, function(item){
