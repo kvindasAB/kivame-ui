@@ -13,7 +13,7 @@ h3 {
 
 .body-wrapper {
     background-color: #34241d;
-
+    margin: 30px;
 }
 
 .logo-stripe {
@@ -58,12 +58,18 @@ body {
 
 .navbar {
     background-color: white;
-    height: 75px;
+    height: 85px;
 }
 
 .navbar-brand {
     margin: 0;
+    margin-top: 10px;
     padding: 0;
+}
+
+.navbar-nav {
+    float: right;
+    padding-top: 20px;
 }
 
 .carousel-caption {
