@@ -11,11 +11,11 @@
                   <div id="relative">
                   <img ng-src="http://lorempixel.com/350/350" class="emphasized" style="margin:auto;">
                   <div ng-click="flipImage()" class="carousel-caption">
-                      <h4 class="l-name">{{APIreturn.borrower_name}}</h4>
-                      <h4 class="l-country">{{APIreturn.country}}</h4>
-                      <img src={{APIreturn.country_flag}} class="flag" alt="flag">
+                      <!-- <h4 class="l-name">{{APIreturn.borrower_name}}</h4> -->
+                      <h3 class="l-country">{{APIreturn.country}}</h3>
                       <h4 class="l-name">{{apiReturn[0].borrower_name}}</h4>
-                      <h4 class="l-country">{{apiReturn[0].country}}</h4>
+                      <img src={{APIreturn.country_flag}} class="flag" alt="flag">
+                      <strong><h4 class="l-country">{{apiReturn[0].country}}</h4></strong>
                       <div class="prog-cont">
                         <div class="prog-bar">{{setProgress(20)}}</div>
                       </div>
