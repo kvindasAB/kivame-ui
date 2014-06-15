@@ -4,8 +4,22 @@
     padding-top: 60px;
 }
 
+#img-container{
+    overflow-x: scroll;
+    position: relative;
+}
+
 #images {
-  width: 700px;
+    width: 2000px;
+}
+
+.right-scroller {
+    background-color: #bbb;
+    font-size: 50px;
+    width: 50px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
 }
 
 footer {
@@ -13,3 +27,4 @@ footer {
     padding-top: 10px;
     border-top: 1px solid #bbb;
 }
+
