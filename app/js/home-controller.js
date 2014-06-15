@@ -10,6 +10,7 @@ angular.module('kivame.home.controllers', [])
 
         // ATTRIBUTES
         $scope.kivalist = null;
+        $scope.APIreturn = [{"funded_amount": 0, "funded_percentage": 0.0, "borrower_name": "Sokkriyas", "image": "Sokkriyas", "long_description": "Sokkriyas (in the photo), age 40, is a security guard for a nightclub in Phnom Penh city. He lives in a Phnom Penh suburb. He has three children, one son and two daughters. Two of his children have full-time employment and the other one attends school.\r\n\r\nHis wife sells nets and blankets. She orders nets and blankets from Vietnam, one of Cambodia\u2019s neighboring countries, and she resells them at a market in Phnom Penh. She wants to increase the volume of nets and blankets she buys and sells. \r\n\r\nHence, Sokkriyas applied for a loan to help his wife!\r\n", "loan_amount": 200, "country_code": "KH", "country": "Cambodia", "short_description": " to buy additional nets and blankets for resale. ", "id": 723010}][0]
 
 
         // METHODS
