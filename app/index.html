@@ -22,6 +22,8 @@
     function statusChangeCallback(response) {
       console.log('statusChangeCallback');
       console.log(response);
+
+      angular.element('html').scope().fbauth = response;
       // The response object is returned with a status field that lets the
       // app know the current login status of the person.
       // Full docs on the response object can be found in the documentation
@@ -52,7 +54,9 @@
       });
     }
 
+
     window.fbAsyncInit = function() {
+        console.log("about to call facebook init");
     FB.init({
       appId      : '326104160871341',
       cookie     : true,  // enable cookies to allow the server to access
