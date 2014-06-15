@@ -49,6 +49,6 @@ angular.module('kivame.login.controllers', [])
   }])
   .controller('FBController', ['$scope', function($scope){
 
-        }
+
   }]);
 
