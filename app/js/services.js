@@ -64,7 +64,7 @@ angular.module('kivame.services', []).
         console.log('getRecommendedLoans...');
         console.log(params);
         var postParam = undefined;
-        if(params){
+        if(params && params.authResponse){
            postParam = {params: {token: params.authResponse.accessToken} };
         }
 
