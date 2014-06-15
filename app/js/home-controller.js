@@ -24,11 +24,6 @@ angular.module('kivame.home.controllers', [])
             id: 722269 }][0]
 
 
-        $scope.$watch("fbauth", function(newValue, oldValue){
-            console.log("facebook auth");
-            console.log(newValue);
-        });
-
         // METHODS
         $scope.init = function(){
             console.log("init...");
