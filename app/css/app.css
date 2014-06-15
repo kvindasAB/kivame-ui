@@ -52,6 +52,10 @@ footer {
     right: 0px;
 }
 
+.loan-item{
+
+}
+
 
 .navbar {
     background-color: white;
@@ -71,7 +75,8 @@ footer {
 
 .carousel-caption {
     height: 250px;
-    left: 10%;
+    width: 250px;
+    left: 7%;
 }
 
 .l-name {
@@ -80,7 +85,7 @@ footer {
 
 .l-desc {
     position: relative;
-    top: 90%;
+    top: 70%;
 }
 
 .emphasized {
@@ -89,4 +94,12 @@ footer {
 
 .fb-banner {
     font-size: 12px;
+}
+
+.prog-bar {
+    color: #fff;
+    text-align: right;
+    height: 25px;
+    background-color: #0ba1b5;
+    border-radius: 3px;
 }
