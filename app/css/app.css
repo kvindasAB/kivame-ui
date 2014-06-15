@@ -4,13 +4,50 @@
     padding-top: 60px;
 }
 
+#img-container{
+    overflow-x: scroll;
+    position: relative;
+}
+
+#images {
+    width: 2000px;
+}
+
+.right-scroller {
+    background-color: #bbb;
+    font-size: 50px;
+    width: 50px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
 footer {
     margin-top: 20px;
     padding-top: 10px;
     border-top: 1px solid #bbb;
 }
 
+body {
+    background-image: url('../img/textures/snow_01.jpg');
+    background-position: center;
+    background-attachment: fixed;
+}
 
-.loan-item{
+.carousel-caption {
+    height: 250px;
+    left: 10%;
+}
 
+.l-name {
+    float: left;
+}
+
+.l-desc {
+    position: relative;
+    top: 90%;
+}
+
+.emphasized {
+    box-shadow: 0 0 0.5em 0.5em #443838;
 }
