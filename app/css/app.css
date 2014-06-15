@@ -81,6 +81,7 @@ footer {
 
 .l-name {
     float: left;
+    font-size: 24px;
 }
 
 .l-desc {
@@ -117,3 +118,4 @@ footer {
     width: 500px;
     background-color: yellow;
 }
+
