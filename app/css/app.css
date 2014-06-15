@@ -10,7 +10,17 @@ footer {
     border-top: 1px solid #bbb;
 }
 
-
 .loan-item{
 
+}
+
+.carousel-caption {
+    height: 250px;
+    width: 250px;
+}
+
+body {
+    background-image: url('../img/textures/snow_01.jpg');
+    background-position: center;
+    background-attachment: fixed;
 }
