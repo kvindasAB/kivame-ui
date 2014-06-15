@@ -67,4 +67,9 @@ angular.module('kivame.home.controllers', [])
             $(".prog-bar").width(progressBarWidth).html(progress + "% ");
         }
 
+        $scope.flipImage = function() {
+            console.log(this)
+            console.log("GONNA FLIP THE STUFF!!")
+        }
+
   }]);
