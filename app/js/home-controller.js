@@ -56,7 +56,14 @@ angular.module('kivame.home.controllers', [])
 
         $scope.flipImage = function() {
             console.log(this)
+            debugger
+            // APPEND A BOX ONTO THE PAGE
+            // POPULATE IT WITH THE SOME TEXT!!!
+            $('body').append('<div class="loan-show"><h1>NAME</h1></div>')
             console.log("GONNA FLIP THE STUFF!!")
+        }
+        $scope.incrementCounter = function() {
+
         }
 
   }]);
