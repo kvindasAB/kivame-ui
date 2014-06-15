@@ -6,30 +6,7 @@ module.exports = function ( grunt ) {
    */
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-connect-rewrite');
-
-  var rewriteRulesSnippet = require('grunt-connect-rewrite/lib/utils').rewriteRequest;
-
-  var rewriteRulesMiddlewareEnableFn = function (connect, options) {
-    var middlewares = [];
-
-    // RewriteRules support
-    middlewares.push(rewriteRulesSnippet);
-
-    if (!Array.isArray(options.base)) {
-        options.base = [options.base];
-    }
-
-    var directory = options.directory || options.base[options.base.length - 1];
-    options.base.forEach(function (base) {
-        // Serve static files.
-        middlewares.push(connect.static(base));
-    });
-
-    // Make directory browse-able.
-    middlewares.push(connect.directory(directory));
-
-    return middlewares;
-  };
+  grunt.loadNpmTasks('grunt-connect-proxy');
 
   /**
    * This is the configuration object Grunt uses to give each plugin its
@@ -51,40 +28,54 @@ module.exports = function ( grunt ) {
      * testserver - http server used for e2e testing
      */
     connect: {
+      proxies: [
+            {
+                context:'/ws/',
+                host: 'ec2-54-187-253-179.us-west-2.compute.amazonaws.com',
+                port: 8000,
+                changeOrigin: true,
+                rewrite: {
+                   '^/ws/': 'http://ec2-54-187-253-179.us-west-2.compute.amazonaws.com:8000/'
+                 }
+            }
+        ],
       options: {
-        port: 8000,
+        port: 8080,
         base: 'app',
         hostname: 'localhost'
       },
       server: {
         options: {
-          keepalive: false,
-          middleware: rewriteRulesMiddlewareEnableFn
+          keepalive: false
         }
       },
       serversa: {
         options: {
           keepalive: true,
-          middleware: rewriteRulesMiddlewareEnableFn
+          middleware: function (connect, options) {
+             var proxy = require('grunt-connect-proxy/lib/utils').proxyRequest;
+             return [
+                proxy,
+                // Serve static files.
+                connect.static(options.base),
+                // Make empty directories browsable.
+                connect.directory(options.base)
+             ];
+          }
         }
       },
       servercompilesa: {
         options: {
           base: 'app',
-          keepalive: true,
-          middleware: rewriteRulesMiddlewareEnableFn
+          keepalive: true
         }
       },
       testserver: {
         options: {
           port: 8100,
-          keepalive: false,
-          middleware: rewriteRulesMiddlewareEnableFn
+          keepalive: false
         }
-      },
-      rules: [
-        {from: '^/ws/(.*)$', to: 'http://ec2-54-187-253-179.us-west-2.compute.amazonaws.com:8000/$1', redirect: 'permanent'}
-      ]
+      }
     }
 
 
@@ -96,6 +87,6 @@ module.exports = function ( grunt ) {
   /**
    * The default task is to build and compile.
    */
-  grunt.registerTask( 'default', [ 'configureRewriteRules','connect:serversa' ] );
+  grunt.registerTask( 'default', [ 'configureProxies', 'connect:serversa' ] );
 
 };
