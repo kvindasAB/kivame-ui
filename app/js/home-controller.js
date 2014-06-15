@@ -23,6 +23,10 @@ angular.module('kivame.home.controllers', [])
             short_description: 'to buy fertilizer and herbicide, and pay for plowing.',
             id: 722269 }][0]
 
+        $scope.$watch("fbauth", function(newValue, oldValue){
+            console.log("facebook auth");
+            console.log(newValue);
+        });
 
         // METHODS
         $scope.init = function(){
