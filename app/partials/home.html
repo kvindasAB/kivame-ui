@@ -5,7 +5,6 @@
     <div class="row" ng-repeat="category in kivalist">
 
         <h3>{{category.name}}</h3>
-
         <carousel >
           <slide ng-repeat="slide in category.slides" >
               <div class="col-md-3" ng-repeat="loan in slide">
@@ -14,6 +13,7 @@
                   <div ng-click="flipImage()" class="carousel-caption">
                       <h4 class="l-name">{{loan.borrower_name}}</h4>
                       <h4 class="l-country">{{loan.country}}</h4>
+                      <img src={{APIreturn.country_flag}} class="flag" alt="flag">
                       <div class="prog-cont">
                         <div class="prog-bar">{{setProgress(loan.funded_percentage)}}</div>
                       </div>

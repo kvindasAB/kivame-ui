@@ -73,19 +73,23 @@ footer {
     padding-top: 20px;
 }
 
-.carousel-caption {
-    height: 250px;
-    width: 250px;
-    left: 7%;
-}
-
 .l-name {
+    font-family: 'museo_slab500', serif;
     float: left;
+    font-size: 34px;
+    width: 100%;
 }
 
 .l-desc {
     position: relative;
     top: 70%;
+}
+
+.l-country {
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
 .emphasized {
@@ -112,8 +116,22 @@ footer {
     cursor: pointer;
 }
 
+.carousel-caption {
+    height: 350px;
+    margin: 0;
+    padding: 0;
+    width: 350px;
+}
+
 .loan-show {
     height: 500px;
     width: 500px;
     background-color: yellow;
+}
+
+#relative {
+    margin: 0;
+    padding: 0;
+    height: 350px;
+    width: 350px;
 }
