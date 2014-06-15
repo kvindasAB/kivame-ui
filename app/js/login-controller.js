@@ -3,7 +3,7 @@
 /* Controllers */
 
 angular.module('kivame.login.controllers', [])
-  .controller('LoginController', ['$scope', '$window', 'KivaService', function($scope, $window, KivaService) {
+  .controller('LoginController', ['$scope', '$window', '$location', 'KivaService', function($scope, $window, $location, KivaService) {
 
         // ATTRIBUTES
 
@@ -43,6 +43,7 @@ angular.module('kivame.login.controllers', [])
             };
             KivaService.loginKivame(function(){
                 console.log("onKivaCodeSubmitClick...");
+                $location.path('home');
             }, params);
         };
 
