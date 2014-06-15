@@ -40,7 +40,7 @@ module.exports = function ( grunt ) {
             }
         ],
       options: {
-        port: 8000,
+        port: 8080,
         base: 'app',
         hostname: 'localhost'
       },
