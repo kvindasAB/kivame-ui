@@ -118,8 +118,8 @@
             <li><a href="#/login">Login</a></li>
             <li><a href="#/home">Home</a></li>
             <li><a href="#/sidescroll">SideScroll</a></li>
-              <p id="status"></p>
-            <li><a href="#"></a></li>
+            <li><p id="status"></p></li>
+              <li><div ng-include="'partials/fb-login.html'"></div></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -127,7 +127,6 @@
 
     <!-- NAVBAR - END -->
 <div class="body-wrapper">
-
 
     <div class="main-container container" ng-view>
         <!--[if lt IE 7]>
@@ -157,5 +156,6 @@
   <script src="js/sidescroll-controller.js"></script>
   <script src="js/filters.js"></script>
   <script src="js/directives.js"></script>
+  <script src="js/nav-controller.js"></script>
 </body>
 </html>

@@ -23,7 +23,6 @@ angular.module('kivame.home.controllers', [])
             short_description: 'to buy fertilizer and herbicide, and pay for plowing.',
             id: 722269 }][0]
 
-        $scope.isNotFbLogged = true;
 
         $scope.$watch("fbauth", function(newValue, oldValue){
             console.log("facebook auth");
@@ -34,7 +33,6 @@ angular.module('kivame.home.controllers', [])
         $scope.init = function(){
             console.log("init...");
             $scope.requestLoans();
-            $scope.isLoggedInFB();
         }
 
         $scope.requestLoans = function() {
@@ -69,10 +67,6 @@ angular.module('kivame.home.controllers', [])
             console.log("button just clicked." + name);
         }
 
-        $scope.isLoggedInFB = function() {
-            if (FB.getUserID() != ""){
-                $scope.isNotFbLogged = false;
-            }
         $scope.setProgress = function(progress) {
             var progressBarWidth = progress * $(".prog-cont").width()/ 100;
             $(".prog-bar").width(progressBarWidth).html(progress + "% ");
