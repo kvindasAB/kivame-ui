@@ -22,6 +22,8 @@
     function statusChangeCallback(response) {
       console.log('statusChangeCallback');
       console.log(response);
+
+      angular.element('html').scope().fbauth = response;
       // The response object is returned with a status field that lets the
       // app know the current login status of the person.
       // Full docs on the response object can be found in the documentation
@@ -38,8 +40,8 @@
       } else {
         // The person is not logged into Facebook, so we're not sure if
         // they are logged into this app or not.
-        document.getElementById('status').innerHTML = 'Please log ' +
-          'into Facebook.';
+        document.getElementById('status').innerHTML = 'Connect your' +
+          ' Facebook account.';
       }
     }
 
@@ -52,7 +54,9 @@
       });
     }
 
+
     window.fbAsyncInit = function() {
+        console.log("about to call facebook init");
     FB.init({
       appId      : '326104160871341',
       cookie     : true,  // enable cookies to allow the server to access
@@ -118,6 +122,8 @@
             <li><a href="#/login">Login</a></li>
             <li><a href="#/home">Home</a></li>
             <li><a href="#/sidescroll">SideScroll</a></li>
+            <li><p id="status"></p></li>
+              <li><div ng-include="'partials/fb-login.html'"></div></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -125,7 +131,6 @@
 
     <!-- NAVBAR - END -->
 <div class="body-wrapper">
-
 
     <div class="main-container container" ng-view>
         <!--[if lt IE 7]>
@@ -155,5 +160,6 @@
   <script src="js/sidescroll-controller.js"></script>
   <script src="js/filters.js"></script>
   <script src="js/directives.js"></script>
+  <script src="js/nav-controller.js"></script>
 </body>
 </html>

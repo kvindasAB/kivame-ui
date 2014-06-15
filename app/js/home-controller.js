@@ -36,6 +36,7 @@ angular.module('kivame.home.controllers', [])
             }
         ]
 
+
         $scope.$watch("fbauth", function(newValue, oldValue){
             console.log("facebook auth");
             console.log(newValue);

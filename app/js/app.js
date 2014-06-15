@@ -11,8 +11,10 @@ angular.module('kivame', [
   'kivame.home.controllers',
   'kivame.login.controllers',
   'kivame.sidescroll.controllers',
-  'kivame.controllers'
+  'kivame.controllers',
+  'kivame.nav.controllers'
 ]).
+
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/login', {templateUrl: 'partials/login.html', controller: 'LoginController'});
   $routeProvider.when('/home', {templateUrl: 'partials/home.html', controller: 'HomeController'});

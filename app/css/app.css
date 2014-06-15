@@ -11,9 +11,17 @@ h3 {
     -webkit-font-smoothing:antialiased;
 }
 
+footer {
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #bbb;
+}
+
 .body-wrapper {
     background-color: #34241d;
-
+    margin: 30px 0px;
+    padding: 0;
+    width: 100%;
 }
 
 .logo-stripe {
@@ -44,30 +52,25 @@ h3 {
     right: 0px;
 }
 
-footer {
-    margin-top: 20px;
-    padding-top: 10px;
-    border-top: 1px solid #bbb;
-}
-
 .loan-item{
 
 }
 
-body {
-    background-image: url('../img/textures/snow_01.jpg');
-    background-position: center;
-    background-attachment: fixed;
-}
 
 .navbar {
     background-color: white;
-    height: 75px;
+    height: 85px;
 }
 
 .navbar-brand {
     margin: 0;
+    margin-top: 10px;
     padding: 0;
+}
+
+.navbar-nav {
+    float: right;
+    padding-top: 20px;
 }
 
 .carousel-caption {
@@ -87,6 +90,10 @@ body {
 
 .emphasized {
     box-shadow: 0 0 0.5em 0.5em #443838;
+}
+
+.fb-banner {
+    font-size: 12px;
 }
 
 .prog-bar {

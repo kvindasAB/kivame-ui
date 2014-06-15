@@ -12,6 +12,8 @@ angular.module('kivame.services', []).
     service.URL_KIVA_TOKEN = "/ws/auth/kiva_request/";
     service.URL_KIVAME_LOGIN = "ws/auth/kiva_access/";
 
+    service.URL_LOAN_LIST = "/ws/loan_list";
+
     service.URL_KIVA_LOGIN = "https://www.kiva.org/oauth/authorize?client_id=com.kivame&response_type=code&oauth_callback=oob&state=[STATE]&oauth_token=[OAUTH_TOKEN]";
 
     service.TOKEN_STATE = "[STATE]";
@@ -59,6 +61,18 @@ angular.module('kivame.services', []).
     };
 
     service.getRecommendedLoans = function(cb, params){
+
+        /*
+        $http.get(service.URL_LOAN_LIST, params)
+        .success(function(result){
+            console.log("loanList...");
+            console.log(result);
+            cb(result);
+        }).error(function(result){
+            service.handleError("An error has occured while login with Kiva.", result);
+        });
+        */
+
         console.log("service.getRecommendedLoans...");
         console.log(cb);
         var result = [];
