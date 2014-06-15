@@ -104,3 +104,16 @@ footer {
     border-radius: 3px;
 }
 
+.carousel-control {
+    z-index: 10;
+}
+
+.carousel-control:hover {
+    cursor: pointer;
+}
+
+.loan-show {
+    height: 500px;
+    width: 500px;
+    background-color: yellow;
+}
