@@ -4,6 +4,7 @@
 // Declare app level module which depends on filters, and services
 angular.module('kivame', [
   'ngRoute',
+  'ui.bootstrap',
   'kivame.filters',
   'kivame.services',
   'kivame.directives',
