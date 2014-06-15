@@ -11,6 +11,10 @@ angular.module('kivame.home.controllers', [])
         // ATTRIBUTES
         $scope.kivalist = null;
 
+        $scope.$watch("fbauth", function(newValue, oldValue){
+            console.log("facebook auth");
+            console.log(newValue);
+        });
 
         // METHODS
         $scope.init = function(){
