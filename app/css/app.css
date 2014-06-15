@@ -1,5 +1,27 @@
 /* app css stylesheet */
 
+
+body {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+h3 {
+    color: #e7ffcc;
+    font-family: 'museo_slab500', serif;
+    -webkit-font-smoothing:antialiased;
+}
+
+.body-wrapper {
+    background-color: #34241d;
+
+}
+
+.logo-stripe {
+    background-color: white;
+    position: relative;
+    width: 100%;
+}
+
 .main-container {
     padding-top: 60px;
 }
@@ -32,6 +54,16 @@ body {
     background-image: url('../img/textures/snow_01.jpg');
     background-position: center;
     background-attachment: fixed;
+}
+
+.navbar {
+    background-color: white;
+    height: 75px;
+}
+
+.navbar-brand {
+    margin: 0;
+    padding: 0;
 }
 
 .carousel-caption {
