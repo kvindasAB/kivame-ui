@@ -1,4 +1,8 @@
 <div class="fb-banner" >
-  <div class="fb-login-button" data-size="small" data-show-faces="false" data-auto-logout-link="true">
+  <span ng-show="navdata.isNotFbLogged">Conect your Facebook account</span>
+  <div class="fb-login-button"
+       data-size="small" data-show-faces="false"
+       data-auto-logout-link="true"
+       onlogin="checkLoginState()">
   </div>
 </div>
