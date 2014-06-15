@@ -20,10 +20,35 @@ Are you looking at Internet Explorer on an actual Windows machine or are you che
 Fonts not loading in IE9
 IE9, like Firefox, requires that fonts be served from the same domain as the website. Make sure that is the case.
 */
+@font-face{
+    font-family: 'Museo Slab';
+    src: url('MuseoSlab.eot');
+    src: url('MuseoSlab.eot?#iefix') format('embedded-opentype'),
+         url('MuseoSlab.woff') format('woff'),
+         url('MuseoSlab.ttf') format('truetype'),
+         url('MuseoSlab.svg#Museo Slab') format('svg');
+}
 
 body {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+h3 {
+    color: #e7ffcc;
+    font-family: 'Museo Slab', serif;
+}
+
+.body-wrapper {
+    background-color: #34241d;
 
 }
+
+.logo-stripe {
+    background-color: white;
+    position: relative;
+    width: 100%;
+}
+
 .main-container {
     padding-top: 60px;
 }
@@ -56,6 +81,16 @@ body {
     background-image: url('../img/textures/snow_01.jpg');
     background-position: center;
     background-attachment: fixed;
+}
+
+.navbar {
+    background-color: white;
+    height: 75px;
+}
+
+.navbar-brand {
+    margin: 0;
+    padding: 0;
 }
 
 .carousel-caption {
