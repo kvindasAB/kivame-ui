@@ -10,19 +10,6 @@ angular.module('kivame.home.controllers', [])
 
         // ATTRIBUTES
         $scope.kivalist = null;
-        $scope.APIreturn = [{ funded_amount: 0,
-            short_image_url: 'http://www.kiva.org/img/w250/722269.jpg',
-            funded_percentage: 0,
-            borrower_name: 'Benkadi 5 Group',
-            loan_amount: 950,
-            long_description: 'The ten members of group Benkadi 5 are married women. They are on average 35 years old with four children, and most of them live in traditional families in N’Tessoni (Lobougoula township, Sikasso circle in Mali’s third administrative region).\r\n\r\nThey are collaborating with micro-finance institution Soro Yiriwaso to carry out their agricultural activities during the rainy season. This is their tenth loan cycle with Soro Yiriwaso; previous loans were paid back on time.\r\n\r\nMrs. Bintou’s cultivar of choice is rice; she is the second woman sitting from left to right in the photo of this group of women, Benkadi 5. With her loan, she plans to purchase one 50-kilo bag of fertilizer, 1 container of herbicide, and to pay for the plowing labor on 1.2 acres.\r\n\r\nAfter the harvest, production is sold in the village and in Sikasso, to a mixed-gender clientele paying cash or requesting credit.\r\n\r\nMrs. Bintou forecasts an average profit of 73,000 XOF per cycle. The revenue will allow her to repay her loan with its interest on the one hand, and on the other to support her husband with the family’s daily expenses.',
-            image_id: 1622421,
-            large_image_url: 'http://www.kiva.org/img/w800/722269.jpg',
-            country_code: 'ML',
-            country: 'Mali',
-            short_description: 'to buy fertilizer and herbicide, and pay for plowing.',
-            id: 722269 }][0]
-
 
         // METHODS
         $scope.init = function(){
