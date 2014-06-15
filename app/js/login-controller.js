@@ -2,8 +2,8 @@
 
 /* Controllers */
 
-angular.module('kivame.controllers', [])
-  .controller('MyCtrl1', ['$scope', function($scope) {
+angular.module('kivame.login.controllers', [])
+  .controller('LoginController', ['$scope', function($scope) {
 
         $scope.myname = "Whatever name";
         $scope.onButtonClick = function(name){
@@ -11,8 +11,5 @@ angular.module('kivame.controllers', [])
         }
 
 
-
-  }])
-  .controller('MyCtrl2', ['$scope', function($scope) {
 
   }]);
