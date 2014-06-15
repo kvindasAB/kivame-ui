@@ -38,10 +38,10 @@ angular.module('kivame.home.controllers', [])
         $scope.createSlidesPerCategory = function(argCategory){
             argCategory.slides = [];
             var start, end;
-            for(var i = 0; i < argCategory.loans.length; i++){
+            for(var i = 0; i < argCategory.loans.length/$scope.ITEMS_PER_SLIDE; i++){
                 start = i * $scope.ITEMS_PER_SLIDE;
                 end = (i * $scope.ITEMS_PER_SLIDE) + $scope.ITEMS_PER_SLIDE;
-                end = end > argCategory.length ? argCategory.length : end;
+                end = end > argCategory.loans.length ? argCategory.loans.length : end;
                 argCategory.slides.push(argCategory.loans.slice(start, end));
             }
         }

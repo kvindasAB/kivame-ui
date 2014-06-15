@@ -28,6 +28,23 @@ angular.module('kivame.services', []).
         tmpLoans.push(service.createMockLoan());
         tmpLoans.push(service.createMockLoan());
         tmpLoans.push(service.createMockLoan());
+
+        tmpLoans.push(service.createMockLoan());
+        tmpLoans.push(service.createMockLoan());
+        tmpLoans.push(service.createMockLoan());
+        tmpLoans.push(service.createMockLoan());
+        tmpLoans.push(service.createMockLoan());
+
+        tmpLoans.push(service.createMockLoan());
+        tmpLoans.push(service.createMockLoan());
+        tmpLoans.push(service.createMockLoan());
+        tmpLoans.push(service.createMockLoan());
+        tmpLoans.push(service.createMockLoan());
+
+        tmpLoans.push(service.createMockLoan());
+        tmpLoans.push(service.createMockLoan());
+        tmpLoans.push(service.createMockLoan());
+        tmpLoans.push(service.createMockLoan());
         tmpLoans.push(service.createMockLoan());
 
         return {
