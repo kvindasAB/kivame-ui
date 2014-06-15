@@ -28,6 +28,17 @@ footer {
     border-top: 1px solid #bbb;
 }
 
-.loan-item{
+body {
+    background-image: url('../img/textures/snow_01.jpg');
+    background-position: center;
+    background-attachment: fixed;
+}
 
+.carousel-caption {
+    height: 250px;
+    left: 10%;
+}
+
+h4 {
+    float: left;
 }
