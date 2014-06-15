@@ -11,9 +11,17 @@ h3 {
     -webkit-font-smoothing:antialiased;
 }
 
+footer {
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #bbb;
+}
+
 .body-wrapper {
     background-color: #34241d;
-    margin: 30px;
+    margin: 30px 0px;
+    padding: 0;
+    width: 100%;
 }
 
 .logo-stripe {
@@ -44,17 +52,6 @@ h3 {
     right: 0px;
 }
 
-footer {
-    margin-top: 20px;
-    padding-top: 10px;
-    border-top: 1px solid #bbb;
-}
-
-body {
-    background-image: url('../img/textures/snow_01.jpg');
-    background-position: center;
-    background-attachment: fixed;
-}
 
 .navbar {
     background-color: white;
