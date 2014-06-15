@@ -94,7 +94,10 @@ footer {
 }
 
 .emphasized {
-    box-shadow: 0 0 0.5em 0.5em #443838;
+    position: relative;
+    overflow: hidden;
+    width: 350px;
+    /*box-shadow: 0 0 0.5em 0.5em #443838;*/
 }
 
 .fb-banner {
@@ -132,6 +135,7 @@ footer {
 
 #relative {
     margin: 0;
+    overflow: hidden;
     padding: 0;
     height: 350px;
     width: 350px;
