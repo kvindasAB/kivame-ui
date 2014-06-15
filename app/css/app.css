@@ -96,3 +96,7 @@ body {
     background-color: #0ba1b5;
     border-radius: 3px;
 }
+
+.carousel-control {
+    z-index: 10;
+}
