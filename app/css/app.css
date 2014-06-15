@@ -76,7 +76,7 @@ footer {
 .l-name {
     font-family: 'museo_slab500', serif;
     float: left;
-    font-size: 34px;
+    font-size: 30px;
     width: 100%;
 }
 
@@ -93,15 +93,40 @@ footer {
     text-transform: uppercase;
 }
 
-.emphasized {
+/*.emphasized {
     position: relative;
     overflow: hidden;
-    width: 350px;
-    /*box-shadow: 0 0 0.5em 0.5em #443838;*/
+    margin: 0 auto;
+}*/
+
+.frame {
+    height: 350px;
+    position: relative;
+    min-width: 350px;
+}
+
+.emphasized {
+    position: relative;
+    margin: 0 auto;
+    padding: 0;
+    min-width: 350px;
+    min-height: 350px;
+}
+
+.emphasized img {
+    max-width: 375px;
+    min-width: 350px;
+    padding: 0;
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
 }
 
 .fb-banner {
     font-size: 12px;
+}
+.prog-count {
+    position: relative;
 }
 
 .prog-bar {
@@ -110,6 +135,8 @@ footer {
     height: 25px;
     background-color: #0ba1b5;
     border-radius: 3px;
+    position: absolute;
+    bottom: 0;
 }
 
 .carousel-control {
