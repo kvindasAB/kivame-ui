@@ -9,7 +9,6 @@
           <slide ng-repeat="slide in category.slides" >
               <div class="col-md-3" ng-repeat="loan in slide">
                   <div id="relative">
-                  <img ng-src="http://lorempixel.com/350/350" class="emphasized" style="margin:auto;">
                   <img ng-src="{{loan.short_image_url}}" class="emphasized" style="margin:auto;">
                   <div ng-click="flipImage()" class="carousel-caption">
                       <h4 class="l-name">{{loan.borrower_name}}</h4>
