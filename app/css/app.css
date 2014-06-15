@@ -86,6 +86,7 @@ footer {
 }
 
 .l-country {
+    display: inline;
     font-weight: bold;
     font-size: 13px;
     letter-spacing: 2px;
