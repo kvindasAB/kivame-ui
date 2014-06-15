@@ -46,5 +46,9 @@ angular.module('kivame.login.controllers', [])
             }, params);
         };
 
+  }])
+  .controller('FBController', ['$scope', function($scope){
+
 
   }]);
+
