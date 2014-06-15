@@ -23,16 +23,16 @@ angular.module('kivame.home.controllers', [])
         $scope.requestLoans = function() {
             console.log("requestLoans...");
             // Status has not changed. Avoid several queries at once.
-            if($scope.latestFBStatus === $rootScope.fbAuth.status){
+            if($rootScope.fbAuth && $scope.latestFBStatus === $rootScope.fbAuth.status){
                 return;
             }
-            $scope.latestFBStatus = $rootScope.fbAuth.status;
+            $scope.latestFBStatus = $rootScope.fbAuth ? $rootScope.fbAuth.status : undefined;
             KivaService.getRecommendedLoans(function(result){
                 console.log("getRecommendedLoans:...");
                 $scope.createSlidesPerCategoryList(result);
                 console.log(result);
                 $scope.kivalist = result;
-            }, $rootScope.fbAuth);
+            }, $rootScope.fbAuth ? $rootScope.fbAuth : undefined);
         }
 
         $scope.$on('facebookStatusChanged', function(event, value){
