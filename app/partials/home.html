@@ -9,15 +9,14 @@
           <slide ng-repeat="slide in category.slides" >
               <div class="col-md-3" ng-repeat="loan in slide">
                   <div id="relative">
-                  <img ng-src="{{loan.short_image_url}}" class="emphasized" style="margin:auto;">
+                  <img ng-src="{{loan.short_image_url}}" class="emphasized" style="margin:auto;min-width:350px;">
                   <div ng-click="flipImage()" class="carousel-caption">
                       <h4 class="l-name">{{loan.borrower_name}}</h4>
+                      <img ng-src="{{loan.flag_url}}" class="flag" alt="flag" style="width:35px;height:20px;">
                       <h4 class="l-country">{{loan.country}}</h4>
-                      <img src={{APIreturn.country_flag}} class="flag" alt="flag">
                       <div class="prog-cont">
                         <div class="prog-bar">{{setProgress(loan.funded_percentage)}}</div>
                       </div>
-                      <p class="l-desc">{{loan.short_description}}</p>
                   </div>
                   </div>
               </div>
