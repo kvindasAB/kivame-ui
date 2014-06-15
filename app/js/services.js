@@ -63,12 +63,13 @@ angular.module('kivame.services', []).
     service.getRecommendedLoans = function(cb, params){
         console.log('getRecommendedLoans...');
         console.log(params);
-        var postParam = undefined;
+        var postBody = undefined;
         if(params && params.authResponse){
-           postParam = {params: {token: params.authResponse.accessToken} };
+           postBody = {token: params.authResponse.accessToken};
+            //params: {token: params.authResponse.accessToken}
         }
 
-        $http.post(service.URL_LOAN_LIST, null ,postParam)
+        $http.post(service.URL_LOAN_LIST, postBody)
         .success(function(result){
             console.log("allloanList...");
             console.log(result);
