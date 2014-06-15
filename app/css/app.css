@@ -1,5 +1,27 @@
 /* app css stylesheet */
 
+
+body {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+h3 {
+    color: #e7ffcc;
+    font-family: 'museo_slab500', serif;
+    -webkit-font-smoothing:antialiased;
+}
+
+.body-wrapper {
+    background-color: #34241d;
+
+}
+
+.logo-stripe {
+    background-color: white;
+    position: relative;
+    width: 100%;
+}
+
 .main-container {
     padding-top: 60px;
 }
@@ -28,15 +50,30 @@ footer {
     border-top: 1px solid #bbb;
 }
 
+.loan-item{
+
+}
+
 body {
     background-image: url('../img/textures/snow_01.jpg');
     background-position: center;
     background-attachment: fixed;
 }
 
+.navbar {
+    background-color: white;
+    height: 75px;
+}
+
+.navbar-brand {
+    margin: 0;
+    padding: 0;
+}
+
 .carousel-caption {
     height: 250px;
-    left: 10%;
+    width: 250px;
+    left: 7%;
 }
 
 .l-name {
@@ -45,9 +82,17 @@ body {
 
 .l-desc {
     position: relative;
-    top: 90%;
+    top: 70%;
 }
 
 .emphasized {
     box-shadow: 0 0 0.5em 0.5em #443838;
+}
+
+.prog-bar {
+    color: #fff;
+    text-align: right;
+    height: 25px;
+    background-color: #0ba1b5;
+    border-radius: 3px;
 }
